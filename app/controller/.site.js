@@ -8,7 +8,7 @@ module.exports = {
   // 修改分站信息
   "update": {
     "parameters": {
-      "query": ["!id"],
+      "query": ["!site"],
     },
     "requestBody": ["name", "domain", "banner", "copyright", "theme", "content", "remark"],
     "options": {
@@ -27,7 +27,7 @@ module.exports = {
   // 删除分站信息
   "delete": {
     "parameters": {
-      "query": ["!id"],
+      "query": ["!site"],
     },
   },
   // 查询分站列表

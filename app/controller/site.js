@@ -53,7 +53,6 @@ class SiteController extends Controller {
     if (!_.isString(site)) throw new BusinessError(ErrorCode.BADPARAM, '租户信息不存在');
 
     const { name, domain, banner, copyright, theme, content, remark } = this.ctx.request.body;
-    console.log('*********content**********\n', content);
     const res = await this.service.update({ site }, { name, domain, banner, copyright, theme, content, remark }, { projection: '+content' });
     this.ctx.ok({ data: res });
   }
