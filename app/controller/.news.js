@@ -4,19 +4,25 @@ module.exports = {
     "parameters": {
       "query": ["!column"],
     },
-    "requestBody": ["!title", "!content", "picurl", "top", "tags", "attachment", "issuer"],
+    "requestBody": ["!title", "!content", "picurl", "top", "tags", "attachment", "issuer", "remark"],
   },
   // 修改新闻信息
   "update": {
     "parameters": {
       "query": ["!id"],
     },
-    "requestBody": ["title", "content", "picurl", "top", "tags", "attachment", "issuer"],
+    "requestBody": ["title", "content", "picurl", "top", "tags", "attachment", "issuer", "remark"],
+    "options": {
+      "projection": "+content",
+    },
   },
   // 获取新闻详情
   "fetch": {
     "parameters": {
       "query": ["!id"],
+    },
+    "options": {
+      "projection": "+content",
     },
   },
   // 删除新闻

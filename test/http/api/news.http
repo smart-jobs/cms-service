@@ -1,0 +1,22 @@
+
+###
+# 查询新闻信息
+GET http://localhost:8202/api/news/list?column=notice&skip=0&limit=10 HTTP/1.1
+Accept: application/json
+
+###
+# 获取新闻详情
+GET http://localhost:8202/api/news/fetch?id=5bd233253931128db02d9849 HTTP/1.1
+Accept: application/json
+
+###
+# 获取站点配置
+GET http://localhost:8202/api/site/config HTTP/1.1
+Accept: application/json
+X-Tenant: 99991
+
+###
+# 获取站点详情
+GET http://localhost:8202/api/site/content HTTP/1.1
+Accept: application/json
+X-Tenant: 99991

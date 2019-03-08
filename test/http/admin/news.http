@@ -1,0 +1,37 @@
+# 查询新闻信息
+GET http://localhost:8202/admin/news/query?column=notice&skip=0&limit=10 HTTP/1.1
+Accept: application/json
+X-Tenant: 99991
+
+###
+# 获取新闻详情
+GET http://localhost:8202/admin/news/fetch?id=5c81ebf0d036ca95f826deeb HTTP/1.1
+Accept: application/json
+X-Tenant: 99991
+
+###
+# 发布新闻信息
+POST http://localhost:8202/admin/news/create?column=notice HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+X-Tenant: 99991
+X-UserID: test
+
+{
+  "title": "“吉人生根工程”专场招聘会",
+  "content": "<p>“吉人生根工程”2019届吉林省普通高校毕业生专场招聘会</p>"
+}
+
+###
+# 修改新闻信息
+POST http://localhost:8202/admin/news/update?column=notice&id=5c81ebf0d036ca95f826deeb HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+X-Tenant: 99991
+X-UserID: test
+
+{
+  "content": "<p>吉人生根工程”2019届吉林省普通高校毕业生专场招聘会<span style=\"color:red;\">福瑞科技</span></p>"
+}
+
+

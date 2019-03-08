@@ -61,8 +61,8 @@ class NewsService extends CrudService {
 
     // TODO:保存数据
     const data = trimData(payload);
-    const res = await this.model.findByIdAndUpdate(doc.id, { ...data, 'meta.updatedBy': userid }, { new: true }).exec();
-
+    await this.model.findByIdAndUpdate(doc.id, { ...data, 'meta.updatedBy': userid }, { new: true }).exec();
+    const res = this.model.findById(id, '+content').exec();
     return res;
   }
 
@@ -76,11 +76,8 @@ class NewsService extends CrudService {
 
     doc.meta.state = 1;
     await doc.save();
-  }
 
-  async fetch({ id }) {
-    const doc = await this.model.findById(id, '+content').exec();
-    return doc;
+    return 'deleted';
   }
 }
 
