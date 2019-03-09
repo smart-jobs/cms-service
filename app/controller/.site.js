@@ -30,10 +30,12 @@ module.exports = {
       "query": ["!site"],
     },
   },
-  // 查询分站列表
+  // 【管理端】查询分站列表
   "query": {
     "parameters": {
-      "query": ["status"],
+      "options": {
+        "site": { "$ne": "master" },
+      },
     },
     "options": {
       "query": ["skip", "limit"],
@@ -45,7 +47,7 @@ module.exports = {
       }
     }
   },
-  // 分站地址列表
+  // 【网站端】分站地址列表
   "list": {
     "parameters": {
       "options": {
