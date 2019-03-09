@@ -45,4 +45,20 @@ module.exports = {
       }
     }
   },
+  // 分站地址列表
+  "list": {
+    "parameters": {
+      "options": {
+        "site": { "$ne": "master" },
+      },
+    },
+    "service": "query",
+    "options": {
+      "projection": {
+        "name": 1,
+        "site": 1,
+        "domain": 1,
+      }
+    }
+  },
 };

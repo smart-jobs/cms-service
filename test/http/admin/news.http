@@ -11,15 +11,15 @@ X-Tenant: 99991
 
 ###
 # 发布新闻信息
-POST http://localhost:8202/admin/news/create?column=notice HTTP/1.1
+POST http://localhost:8202/admin/news/create?column=faq HTTP/1.1
 Content-Type: application/json
 Accept: application/json
 X-Tenant: 99991
 X-UserID: test
 
 {
-  "title": "CMS功能内测通知",
-  "content": "<p>信息发布功能开始内测</p>"
+  "title": "大学实习的意义有多大？",
+  "content": "<p>简单地说，学生时代的实习就是一个让人变得越来越靠谱的过程。</p>"
 }
 
 ###

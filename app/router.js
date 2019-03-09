@@ -12,6 +12,7 @@ module.exports = app => {
   router.get('/api/news/fetch', controller.news.fetch); // 获取新闻详情
   router.get('/api/site/config', controller.site.config_get); // 获取站点基本信息
   router.get('/api/site/content', controller.site.content); // 获取站点详细信息（关于我们、联系方式）
+  router.get('/api/site/list', controller.site.list); // 获取分站列表
 
   // 管理接口
   // 【分站】新闻接口
