@@ -4,14 +4,14 @@ module.exports = {
     "parameters": {
       "query": ["!column"],
     },
-    "requestBody": ["!title", "!content", "picurl", "top", "tags", "attachment", "issuer", "remark"],
+    "requestBody": ["!title", "!content", "picurl", "top", "tags", "attachment", "issuer"],
   },
   // 修改新闻信息
   "update": {
     "parameters": {
       "query": ["!id"],
     },
-    "requestBody": ["title", "content", "picurl", "top", "tags", "attachment", "issuer", "remark", "meta"],
+    "requestBody": ["title", "content", "picurl", "top", "tags", "attachment", "issuer"],
     "options": {
       "projection": "+content",
     },

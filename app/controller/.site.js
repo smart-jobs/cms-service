@@ -2,7 +2,7 @@ module.exports = {
   // 添加分站信息
   "create": {
     "parameters": {
-      "requestBody": ["!name", "!site", "!domain", "banner", "!copyright", "theme", "!content", "remark"],
+      "requestBody": ["!name", "!site", "!domain", "banner", "!copyright", "theme", "!content"],
     },
   },
   // 修改分站信息
@@ -10,7 +10,7 @@ module.exports = {
     "parameters": {
       "query": ["!site"],
     },
-    "requestBody": ["name", "domain", "banner", "copyright", "theme", "content", "remark"],
+    "requestBody": ["name", "domain", "banner", "copyright", "theme", "content"],
     "options": {
       "projection": "+content",
     },
