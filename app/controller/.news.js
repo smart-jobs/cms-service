@@ -11,7 +11,7 @@ module.exports = {
     "parameters": {
       "query": ["!id"],
     },
-    "requestBody": ["title", "content", "picurl", "top", "tags", "attachment", "issuer", "remark"],
+    "requestBody": ["title", "content", "picurl", "top", "tags", "attachment", "issuer", "remark", "meta"],
     "options": {
       "projection": "+content",
     },
@@ -27,6 +27,12 @@ module.exports = {
   },
   // 删除新闻
   "delete": {
+    "parameters": {
+      "query": ["!id"],
+    },
+  },
+  // 恢复新闻
+  "restore": {
     "parameters": {
       "query": ["!id"],
     },

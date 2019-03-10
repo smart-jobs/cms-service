@@ -66,7 +66,7 @@ class NewsService extends CrudService {
     return res;
   }
 
-  async delete({ id }) {
+  async status({ id, state }) {
 
     // TODO: 检查数据状态
     const doc = await this.model.findById(id).exec();
@@ -74,10 +74,16 @@ class NewsService extends CrudService {
       throw new BusinessError(ErrorCode.DATA_NOT_EXIST);
     }
 
-    doc.meta.state = 1;
-    await doc.save();
+    doc.meta.state = state;
+    return await doc.save();
+  }
 
-    return 'deleted';
+  delete({ id }) {
+    return this.status({ id, state: 1 });
+  }
+
+  restore({ id }) {
+    return this.status({ id, state: 0 });
   }
 }
 

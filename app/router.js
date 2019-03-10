@@ -21,6 +21,7 @@ module.exports = app => {
   router.post('/admin/news/create', controller.news.create);// 发布新闻信息
   router.post('/admin/news/update', controller.news.update);// 修改新闻信息
   router.post('/admin/news/delete', controller.news.delete);// 删除新闻信息
+  router.post('/admin/news/restore', controller.news.restore);// 恢复新闻信息
   // 分站配置接口，用于分站管理员配置本分站信息
   router.get('/admin/site/config', controller.site.config_fetch);// 分站获取自身配置
   router.post('/admin/site/config', controller.site.config_set);// 分站配置自身
