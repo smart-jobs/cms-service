@@ -78,12 +78,12 @@ class NewsService extends CrudService {
     return await doc.save();
   }
 
-  delete({ id }) {
-    return this.status({ id, state: 1 });
+  async delete({ id }) {
+    return await this.status({ id, state: 1 });
   }
 
-  restore({ id }) {
-    return this.status({ id, state: 0 });
+  async restore({ id }) {
+    return await this.status({ id, state: 0 });
   }
 }
 
